@@ -1,10 +1,23 @@
+@keyframes bounce {
+	0%, 20%, 60%, 100% {
+		transform: translateY(0);
+	}
+
+	40% {
+		transform: translateY(-20px);
+	}
+
+	80% {
+		transform: translateY(-10px);
+	}
+}
+
 .App {
   text-align: center;
 }
 
-
 .po_header {
-  color: #878f92;
+  color: #033B5C;
   display: inline;
   width: 25%;
   font-size: 2em;
@@ -18,11 +31,11 @@
 .App-header {
   height: 65px;
   padding: 20px;
-  color: #222;
+  color: inherit;
 }
 
 a, a:hover {
-  color: #878f92;
+  color: #033B5C;
   text-decoration: none;
 }
 
@@ -31,11 +44,12 @@ li {
 	position: relative;
 	padding-bottom: 3px;
   margin-right: 40px;
-  color: #878f92;
+  color: #033B5C;
 }
 
 li:last-child {
-  margin-right: 0;
+  width: 50px;
+  margin-right: 20px;
 }
 
 li:after {
@@ -79,12 +93,12 @@ button {
 }
 
 .watch_demo_button {
-  background-color: #3DD85A;
+  background-color: #3dd85a;
   color: white;
   box-shadow: 10px 10px 5px lightgray;
   margin-right:20px;
   margin-left: -60px;
-  transition: background-color ease-in .3s, width linear .2s, height linear .2s;
+  transition: background-color ease-in .5s, width linear .1s, height linear .1s;
 }
 
 .watch_demo_button.modal {
@@ -101,31 +115,33 @@ button {
 }
 
 .learn_more_button {
-  background-color: white;
-  border: 1px solid #3dd85a;
-  color: #3dd85a;
-  transition: background-color ease-in .3s, width linear .2s, height linear .2s;
+  background-color: #ffffff;
+  border: 1px solid #033B5C;
+  color: #033B5C;
+  transition: background-color ease-in .5s, width linear .1s, height linear .1s;
 }
 
 .learn_more_button:hover {
   width: 230px;
   height: 50px;
-  background-color: #3DD85A;
+  background-color: #033B5C;
   color: white;
   box-shadow: 10px 10px 5px lightgray;
 }
 
-.close_modal {
-  margin-top: -18px;
-  margin-right: -22px;
-  height: 20px;
-  width: 20px;
-  transition: width linear .2s, height linear .2s;
+.learn_reviews_button {
+  margin-top: 20px;
+  background-color: #ffffff;
+  border: 1px solid #033B5C;
+  color: #033B5C;
+  transition: background-color ease-in .5s;
 }
 
-.close_modal:hover {
-height: 25px;
-width: 25px;
+.learn_reviews_button:hover {
+  background-color: #033B5C;
+  color: white;
+  box-shadow: 10px 10px 5px lightgray;
+  animation: bounce 1s;
 }
 
 .modal_input_text {
@@ -137,10 +153,37 @@ width: 25px;
   height: 30px;
 }
 
-.po_text_box {
-  width: 35%;
-  float:right;
-  padding: 40px;
-  margin: 80px;
-  border: 1px solid black;
+.section_one_body {
+  color: #033B5C;
+  font-size: 2.5em;
+  letter-spacing: -2px;
+  font-weight: 100;
+  text-align: left;
+  line-height: 150%;
+}
+
+.section_one_body.part_two {
+  color: #000;
+  font-size: 1em;
+  letter-spacing: 1px;
+  font-weight: 150;
+  line-height: 200%;
+  margin-top: -125px;
+}
+
+.close_icon {
+  position: relative;
+  float: right;
+  height: 30px;
+  width: 30px;
+  margin-top: -48px;
+  margin-right: -50px;
+  color: #ffffff;
+  border-radius: 15px;
+  transition: width linear .2s, height linear .2s;
+}
+.close_icon:hover {
+  height: 35px;
+  width: 35px;
+  animation: bounce 1s;
 }
